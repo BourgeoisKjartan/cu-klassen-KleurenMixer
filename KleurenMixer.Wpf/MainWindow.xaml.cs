@@ -107,10 +107,12 @@ namespace KleurenMixer.Wpf
                 PasEditModeToe(EditModes.canSave);
                 huidigeKleur = (Kleur)lstKleuren.SelectedItem;
                 ToonDetails(huidigeKleur);
+                lblKleur.Background = huidigeKleur.GeefBrush();
             }
             else
             {
                 VerwijderInput();
+                
             }
         }
 
@@ -121,6 +123,7 @@ namespace KleurenMixer.Wpf
             cmbGroen.SelectedIndex = 0;
             PasEditModeToe(EditModes.readOnly);
             tbkFeedback.Visibility = Visibility.Hidden;
+            lblKleur.Background = Brushes.White;
         }
 
         Kleur GeefKleur(int id = 0)
