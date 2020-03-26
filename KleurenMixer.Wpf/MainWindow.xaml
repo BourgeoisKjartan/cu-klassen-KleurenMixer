@@ -1,0 +1,30 @@
+﻿<Window x:Class="KleurenMixer.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KleurenMixer.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="412" Width="532" Loaded="Window_Loaded">
+    <Grid>
+        <ListBox x:Name="lstKleuren" HorizontalAlignment="Left" Height="192" Margin="20,39,0,0" VerticalAlignment="Top" Width="132" SelectionChanged="lstKleuren_SelectionChanged"/>
+        <Label Content="Kleuren" HorizontalAlignment="Left" Margin="21,12,0,0" VerticalAlignment="Top" Width="99"/>
+        <Grid x:Name="grdKleur" Margin="169,41,72,115">
+            <Label x:Name="lblId" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117"/>
+            <Label Content="Naam" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Width="49"/>
+            <Label Content="Rood" HorizontalAlignment="Left" Margin="0,67,0,0" VerticalAlignment="Top" Width="49"/>
+            <Label Content="Groen" HorizontalAlignment="Left" Margin="0,98,0,0" VerticalAlignment="Top" Width="49"/>
+            <Label x:Name="lblBlauw" Content="Blauw" HorizontalAlignment="Left" Margin="0,129,0,0" VerticalAlignment="Top" Width="49" Height="40"/>
+            <TextBox x:Name="txtRood" HorizontalAlignment="Left" Height="23" Margin="71,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" LostFocus="txtRood_LostFocus" TabIndex="1"/>
+            <ComboBox x:Name="cmbGroen" HorizontalAlignment="Left" Margin="71,102,0,0" VerticalAlignment="Top" Width="59" TabIndex="3"/>
+            <Slider x:Name="sldBlauw" HorizontalAlignment="Left" Margin="71,137,0,0" VerticalAlignment="Top" Width="183" Maximum="255" TickPlacement="BottomRight" SnapsToDevicePixels="True" IsSnapToTickEnabled="True" ValueChanged="sldBlauw_ValueChanged" AutoToolTipPlacement="TopLeft" TabIndex="4"/>
+            <TextBox x:Name="txtNaam" HorizontalAlignment="Left" Height="23" Margin="71,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" LostFocus="txtNaam_LostFocus" TabIndex="0"/>
+            <Button x:Name="btnOpslaan" Content="Opslaan" Height="25" Width="65" VerticalAlignment="Top" Margin="100,186,108,0" HorizontalAlignment="Left" TabIndex="6" Click="btnOpslaan_Click" />
+            <Button x:Name="btnNieuw" Content="Nieuw"  Width="65"  Height="25" VerticalAlignment="Top" Margin="10,186,198,0" HorizontalAlignment="Left" Click="btnNieuw_Click" TabIndex="5"/>
+            <Button x:Name="btnVerwijder" Content="Verwijder" Width="65" Height="25" VerticalAlignment="Top" Margin="186,186,21,0" HorizontalAlignment="Left" TabIndex="7" Click="btnVerwijder_Click"/>
+            <Label x:Name="lblKleur" Content="" HorizontalAlignment="Left" Height="53" Margin="135,71,0,0" VerticalAlignment="Top" Width="106" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        </Grid>
+        <TextBlock x:Name="tbkFeedback" HorizontalAlignment="Left" Margin="176,275,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="79" Width="247" Background="#FFFDFDD9" Padding="5" Foreground="White"/>
+    </Grid>
+</Window>
